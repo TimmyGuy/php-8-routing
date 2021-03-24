@@ -1,6 +1,6 @@
 <?php
 
-namespace Short\Attribute;
+namespace Routing\Attribute;
 
 use Attribute;
 
