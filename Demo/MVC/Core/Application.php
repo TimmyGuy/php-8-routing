@@ -1,13 +1,16 @@
 <?php
 
-namespace Router\Demo;
+namespace Router\Demo\Core;
 
-use Router\Attribute\Route;
+use Routing\Attribute\Route;
+use Routing\Core\Router;
 
-class MVCApplication
+require_once('Router.php');
+
+class Application
 {
 
-    public function __construct($controllerDir = 'Demo/Controller', $namespace = 'Router\\')
+    public function __construct($controllerDir = 'Controller', $namespace = 'Routing\\')
     {
         $this->prepareControllerRoutes($controllerDir, $namespace);
     }
@@ -60,6 +63,6 @@ class MVCApplication
 
     public function resolve()
     {
-        Router::run($this->container);
+        Router::run();
     }
 }

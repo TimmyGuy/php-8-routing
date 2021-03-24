@@ -1,12 +1,10 @@
 <?php
 
-
 namespace Routing\Core;
 
 use ReflectionFunction;
 use ReflectionMethod;
 
-// TODO: prefixes + / give route not found with route attribute
 class Router
 {
     private static array $routes = [];

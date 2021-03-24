@@ -1,12 +1,12 @@
 <?php
 
-namespace Router\Demo\Controller;
+namespace Routing\Controller;
 
-use Short\Attribute\Route;
+use Routing\Attribute\Route;
 
-require_once(dirname(__DIR__, 2).'/Attribute/Route.php');
+require_once('Attribute/Route.php');
 
-class HomeController
+class DemoController
 {
     #[Route('/')]
     function index()
@@ -17,5 +17,11 @@ class HomeController
     #[Route('/about')]
     function about() {
         echo "Hello! I'm the about page of this website";
+    }
+
+    #[Route('/view/{foo}')]
+    function view($foo)
+    {
+        echo "Hello! You are viewing {$foo}";
     }
 }

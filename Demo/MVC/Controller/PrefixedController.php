@@ -1,17 +1,18 @@
 <?php
 
-namespace Router\Controller;
+namespace Routing\Controller;
 
-use Short\Attribute\Route;
+use Routing\Attribute\Route;
 
+require_once('Attribute/Route.php');
 
 #[Route('/prefix')]
 class PrefixedController
 {
-    #[Route('/')]
+    #[Route('/foo')]
     function foo()
     {
-        echo "I'm located at `/prefix`";
+        echo "I'm located at `/prefix/foo`";
     }
 
     #[Route('/bar')]
